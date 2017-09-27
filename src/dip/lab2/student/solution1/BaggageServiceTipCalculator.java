@@ -1,9 +1,7 @@
 package dip.lab2.student.solution1;
 
-public class BaggageServiceTipCalculator {
+public class BaggageServiceTipCalculator implements TipCalculator{
 
-    private double minBill = 0.00;
-    private double maxBill = 100.00;
     private double goodRate = 0.20;
     private double fairRate = 0.15;
     private double poorRate = 0.10;
@@ -16,30 +14,6 @@ public class BaggageServiceTipCalculator {
         this.setBagCount(bags);
 
         baseTipPerBag = 1.00; // set default value
-    }
-
-    public final double getMinBill() {
-        return minBill;
-    }
-
-    public final void setMinBill(double minBill) {
-        if (minBill < 0) {
-            throw new IllegalArgumentException("Minimum bill amount cannot be less than zero.");
-        } else {
-            this.minBill = minBill;
-        }
-    }
-
-    public final double getMaxBill() {
-        return maxBill;
-    }
-
-    public final void setMaxBill(double maxBill) {
-        if (maxBill == 0 || maxBill < 0) {
-            throw new IllegalArgumentException("Maximum bill amount cannot be less than or equal to zero.");
-        } else {
-            this.maxBill = maxBill;
-        }
     }
 
     public final double getGoodRate() {

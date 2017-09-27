@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dip.lab2.student.solution1;
 
-/**
- *
- * @author User
- */
-public class TipCalculatorService {
+public class TipCalculatorService {    
+    
+    public double getTip(TipCalculator myTip){
+        if (myTip == null){
+            throw new IllegalArgumentException("Must provide a tip calculator.");
+        }
+        else{
+           return myTip.getTip(); 
+        }
+    }
     
 }

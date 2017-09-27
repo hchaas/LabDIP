@@ -1,14 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dip.lab2.student.solution1;
 
-/**
- *
- * @author User
- */
 public class Startup {
+//            AnimalAgeCalculator animalAge = new CatAgeCalculator(10);       
+//        AnimalAgeService animalAgeService = new AnimalAgeService(animalAge);
+//        double humanAge = animalAgeService.calculateHumanAge(10);
+//        
+//        System.out.println("The human age equivalent of this animal is " + humanAge + " years.");
+    
+    TipCalculator newTip = new FoodServiceTipCalculator(ServiceQuality.GOOD, 55);
+    TipCalculatorService tipThis = new TipCalculatorService();
+    double thisTip = tipThis.getTip(newTip);
+    
     
 }
