@@ -1,14 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dip.lab3.student.solution1;
 
-/**
- *
- * @author User
- */
 public class MessageService {
+    public String readMessage(Reader reader){
+        if (reader == null){
+            throw new IllegalArgumentException("Must specify a reader.");
+        }
+        else{
+            return reader.readMessage();
+        }
+    }
     
+    public void writeMessage(Writer writer){
+        if (writer == null){
+            throw new IllegalArgumentException("Must specify a writer.");
+        }
+        else writer.writeMessage();
+    }
 }
