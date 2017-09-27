@@ -1,6 +1,6 @@
 package dip.lab2.student.solution1;
 
-public class BaggageServiceTipCalculator implements TipCalculator{
+public class BaggageServiceTipCalculator implements TipCalculator {
 
     private double goodRate = 0.20;
     private double fairRate = 0.15;
@@ -76,13 +76,13 @@ public class BaggageServiceTipCalculator implements TipCalculator{
         this.bagCount = bagCount;
     }
 
+    public final ServiceQuality getServiceQuality() {
+        return serviceQuality;
+    }
+
     public final void setServiceRating(ServiceQuality q) {
         // No need to validate because enums provide type safety!
         serviceQuality = q;
-    }
-
-    public final ServiceQuality getServiceQuality() {
-        return serviceQuality;
     }
 
     public final double getTip() {
