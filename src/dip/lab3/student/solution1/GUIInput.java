@@ -5,21 +5,18 @@ import javax.swing.JOptionPane;
 public class GUIInput implements Reader{
     private String message;
     
-    public GUIInput(String message){
-        
+    public GUIInput(){
+        this.setMessage();
     }
     
-    public final String getMessages(){
+    public final String getMessage(){
         return message;
     }
     
-    public final void setMessages(){        
-        String thisMessage = JOptionPane.showInputDialog(null, "Enter message here:");
+    public final void setMessage(){        
+        message = JOptionPane.showInputDialog(null, "Enter message here:");
         if (message == null || message.isEmpty()){
             throw new IllegalArgumentException("Invalid message.");
-        }
-        else{
-            thisMessage = message;
         }
     }
     

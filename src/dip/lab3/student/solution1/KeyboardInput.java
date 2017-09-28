@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class KeyboardInput implements Reader{
     private String message;
     
-    public void KeyboardInput(String message){
+    public void KeyboardInput(){
         this.setMessage();
     }
     
