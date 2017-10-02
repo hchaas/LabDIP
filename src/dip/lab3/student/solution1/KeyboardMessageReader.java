@@ -3,16 +3,8 @@ package dip.lab3.student.solution1;
 
 import java.util.Scanner;
 
-public class KeyboardInput implements Reader{
+public class KeyboardMessageReader implements Reader{
     private String message;
-    
-    public void KeyboardInput(){
-        this.setMessage();
-    }
-    
-    public final String getMessage(){
-        return message;
-    }
     
     public final void setMessage(){
         Scanner keyboard = new Scanner(System.in);
@@ -26,7 +18,6 @@ public class KeyboardInput implements Reader{
             keyboardMessage = message;
         }
     }
-    
     
     @Override
     public final String readMessage(){
